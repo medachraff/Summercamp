@@ -3,7 +3,7 @@
 .task{
     width: 100%;
     height: fit-content;
-    padding: 4% 2%;
+    padding: 4% 0%;
     border: 1px solid white;
     border-left: none;
     border-right: none;
@@ -27,6 +27,8 @@
     font-weight: 400;
     font-size: 30px;
     color: #D2D2D2;
+    margin-left: 2%;
+
 }
 .task .score{
     font-family: 'Inter';
@@ -41,6 +43,8 @@
     font-weight: 400;
     font-size: 18px;
     color: #D2D2D2;
+    margin-left: 2%;
+
 }
 .task .dt{
     font-family: 'Inter';
@@ -48,6 +52,7 @@
     font-weight: 400;
     font-size: 18px;
     color: #D2D2D2;
+    margin-right: 2%;
 
 }
 .gras {

@@ -3,16 +3,18 @@
 .task{
     width: 100%;
     height: fit-content;
-    padding: 4% 2%;
+    padding: 4% 0%;
     border: 1px solid white;
     border-left: none;
     border-right: none;
-
+    border-bottom: none;
 }
 .task .sub1{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 2%;
+
 }
 .task .sub4{
     display: flex;
@@ -42,6 +44,8 @@
     font-weight: 400;
     font-size: 18px;
     color: #D2D2D2;
+    margin-left: 2%;
+
 }
 .task .dt{
     font-family: 'Inter';
@@ -49,6 +53,7 @@
     font-weight: 400;
     font-size: 18px;
     color: #D2D2D2;
+    margin-right: 2%;
 
 }
 .gras {
