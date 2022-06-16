@@ -52,7 +52,13 @@ footer{
 footer h2{
     color: white;
     font-family: 'Inter';
-    font-size: 15px;
-    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 200;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1%;
+    text-transform: uppercase;
+
 }
 /*! *******      F O O T E R-end      *****************/
