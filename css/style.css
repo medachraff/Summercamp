@@ -28,26 +28,7 @@ header .logos .logo-mtc {
 header .logos .logo-mtc img {
     width: 100%;
 }
-.main-theme-btn {
-    
-    width: 250px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 15px;
-    margin: 10px;
-    background-color: #0073FE;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-    transition-duration: 0.4s;
-}
-.main-theme-btn:hover {
-    background-color: #338efd;
-}
-.main-theme-btn a {
-    color: #fff;
-    text-decoration: none;
-}
+
 footer {
     margin: 10px auto;
     margin-top: auto;
