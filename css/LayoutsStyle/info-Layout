@@ -1,0 +1,23 @@
+[LAYOUT SYSTEM]
+...
+::> Layout-0(Header-Main-Footer) [
+    StartPage,
+    RegisterPage,
+    SigninPage,
+    SuiteRegsiterPage,
+    HomeOrgenizerPage,
+    AddPointsPage
+]
+...
+::> Layout-1(Header-Main-Footer) [
+    UserPage,
+    TaksPage,
+    NotificationPage,
+    TransactionPage,
+    ScoreBoardPage,
+    CollectonPage,
+    TradePlacePage,
+    NotificationPage,
+    AssignTaskPage,
+]
+

@@ -1,0 +1,46 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header .logos .logo-sc {
+    width: 350px;
+}
+header .logos .logo-sc img {
+    width: 100%;
+}
+header .logos .logo-mtc {
+    width: 100px;
+    margin: 20px;
+}
+header .logos .logo-mtc img {
+    width: 100%;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p {
+    text-align: center;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 14px;
+}
+@media only screen and (max-width: 400px) {
+    body {
+        width: 100%;
+    }
+    header .logos .logo-sc {
+        width: 80%;
+    }
+}
+

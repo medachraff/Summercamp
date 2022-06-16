@@ -1,0 +1,62 @@
+/**   B O D Y-start    ****/
+body {
+    width: 400px;
+    padding-top: 20px;
+    margin: auto;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+}
+/**   B O D Y-end    ****/
+
+
+/** B U T T O N S THEME -start    ***/
+.main-theme-btn {
+    width: 250px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    margin: 10px;
+    background-color: #0073FE;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+.main-theme-btn:hover {
+    background-color: #338efd;
+}
+.main-theme-btn a {
+    color: #fff;
+    text-decoration: none;
+}
+/** B U T T O N S THEME -end    ***/
+
+
+
+/** T I T L E S THEME -start    ***/
+    /*** Form Title****/
+.Frm-SubTit{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    margin-bottom: 0;
+    color: #0073FE;
+}
+/* ********************  */ 
+
+/** T I T L E S THEME -end    ***/
+
+
+
+/** Input Box THEME -start    ***/
+input{
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 10% 20%;
+    outline: none;
+    border: none;
+
+}
+/** Input Box THEME -end    ***/
