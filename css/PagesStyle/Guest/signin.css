@@ -11,6 +11,7 @@ form .bloc{
     justify-content: center;
     align-items: center;
     width: 80%;
+    margin-top: 2%;
 }
 main form h3{
     display: flex;
