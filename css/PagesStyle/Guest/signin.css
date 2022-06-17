@@ -41,7 +41,7 @@ main form input {
     box-sizing: border-box;
 }*/
 main form .forgot{
-    padding-top: 50px;
+    padding-top: 0;
     font-weight: 100;
     font-size: 20px;
     display: flex;

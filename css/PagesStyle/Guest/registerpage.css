@@ -12,9 +12,9 @@ form .bloc{
     align-items: center;
     width: 80%;
 }
-main form h3{
+main form h3 {
     display: flex;
-    
+    margin: 0;
 }
 main form .ins {
     display: flex;
