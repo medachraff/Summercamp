@@ -15,8 +15,8 @@
 
     <!-- STYLE -->
     <link rel="stylesheet" href="../css/LayoutsStyle/layout-1.css">
-    <link rel="stylesheet" href="../css/ThemesStyle/theme.css">
     <link rel="stylesheet" href="../css/PagesStyle/Organizer/TradePlacePage.css">
+    <link rel="stylesheet" href="../css/ThemesStyle/theme.css">
 
 
     <!-- Script -->
@@ -32,16 +32,17 @@
             </div>
     </header>
     <!--  POPS UP-start   -->
+    <hidden id="DT"></hidden>
 <div class="popUp" id="popUp">
-    <div class="box" id="itemToTrade">
+   <div class="box" id="itemToTrade">
         <div class="close" onclick="HideAllPopUp()">X</div>
         <div class="title" id="title">Choose</div>
         <div class="btns">
-            <button onclick="showPopUp('CoinPopUP')">
+            <button id="Btn_To_Coin" onclick="showPopUp('CoinPopUP')">
                 <img src="../rsc/pics/mtc coin.png" alt="">
                 <p>Coin</p>
             </button>
-            <button onclick="showPopUp('CardsPopUP')">
+            <button id="Btn_To_Card" onclick="showPopUp('CardsPopUP')">
                 <img class="pn" src="../rsc/pics/card.png" alt="">
                 <p>Card</p>
             </button>
@@ -51,8 +52,8 @@
         <div class="close" onclick="HideAllPopUp()">X</div>
         <div class="title" id="title">Coins:</div>
         <form action="" method="post">
-            <input type="text" name="coin" id="txt" placeholder="Enter the budget">
-            <input id="btn" class="main-theme-btn" type="submit" value="Submit">
+            <input type="number" name="coin" id="coins" placeholder="Enter the budget">
+            <input id="Btn_Set_Coins" class="main-theme-btn" type="button" value="Submit">
         </form>
     </div>
 
@@ -60,89 +61,36 @@
         <div class="close" onclick="HideAllPopUp()">X</div>
         <div class="title" id="title">Cards:</div>
         <form action="" method="post">
-            <input type="button" name="coin" id="txt" onclick="showPopUp('SearchCardsPopUP')" placeholder="Search for....">
+            <input type="button" name="coin" id="txt" onclick="showPopUp('SearchCardsPopUP')" value="Search for....">
+            <input type="hidden" id="id_Item">
+
             <div class="counter">
                 <div class="min" onclick="MinCount()">-</div>
                 <div class="countDig" id="COUNTER">0</div>
                 <div class="add" onclick="AddCount()">+</div>
             </div>
-            <input id="btn" class="main-theme-btn" type="submit" value="Submit">
+            <input id="Btn_Set_Cards" onclick="DoneCard(document.getElementById('id_Item').value)" class="main-theme-btn" type="button" value="Submit">
         </form>
     </div>
     <div class="box" id="SearchCardsPopUP">
         <div class="close" onclick="HideAllPopUp(1)">X</div>
             <input type="text" name="coin" id="txt" placeholder="Search for the card">
             <div class="conts">
-                <div class="container">
+                <div class="container" onclick="SelectCard('2154','The Amir')">
                     <img src="../rsc/pics/pictures-member/unknown.png" alt="">
                     <div class="details">
                         <div class="name">The Amir</div>
                         <div class="rank">Legendary</div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container" onclick="SelectCard('1542','The Houssem')">
                     <img src="../rsc/pics/pictures-member/unknown.png" alt="">
                     <div class="details">
-                        <div class="name">The Amir</div>
+                        <div class="name">The Houssem</div>
                         <div class="rank">Legendary</div>
                     </div>
                 </div>
-                <div class="container">
-                    <img src="../rsc/pics/pictures-member/unknown.png" alt="">
-                    <div class="details">
-                        <div class="name">The Amir</div>
-                        <div class="rank">Legendary</div>
-                    </div>
-                </div>
-                <div class="container">
-                    <img src="../rsc/pics/pictures-member/unknown.png" alt="">
-                    <div class="details">
-                        <div class="name">The Amir</div>
-                        <div class="rank">Legendary</div>
-                    </div>
-                </div>
-                <div class="container">
-                    <img src="../rsc/pics/pictures-member/unknown.png" alt="">
-                    <div class="details">
-                        <div class="name">The Amir</div>
-                        <div class="rank">Legendary</div>
-                    </div>
-                </div>
-                <div class="container">
-                    <img src="../rsc/pics/pictures-member/unknown.png" alt="">
-                    <div class="details">
-                        <div class="name">The Amir</div>
-                        <div class="rank">Legendary</div>
-                    </div>
-                </div>
-                <div class="container">
-                    <img src="../rsc/pics/pictures-member/unknown.png" alt="">
-                    <div class="details">
-                        <div class="name">The Amir</div>
-                        <div class="rank">Legendary</div>
-                    </div>
-                </div>
-                <div class="container">
-                    <img src="../rsc/pics/pictures-member/unknown.png" alt="">
-                    <div class="details">
-                        <div class="name">The Amir</div>
-                        <div class="rank">Legendary</div>
-                    </div>
-                </div>
-                <div class="container">
-                    <img src="../rsc/pics/pictures-member/unknown.png" alt="">
-                    <div class="details">
-                        <div class="name">The Amir</div>
-                        <div class="rank">Legendary</div>
-                    </div>
-                </div>
-                <div class="container">
-                    <img src="../rsc/pics/pictures-member/unknown.png" alt="">
-                    <div class="details">
-                        <div class="name">The Amir</div>
-                        <div class="rank">Legendary</div>
-                    </div>
-                </div>
+                
                 
             </div>
         </form>
@@ -165,7 +113,7 @@
                 <img src="../rsc/pics/transaction.png" alt="">
             </div>
             <div class="blc1">
-                <div class="m-blc1">Hunter1</div>
+                <div class="m-blc1">Hunter2</div>
                 <div class="m-blc2">
                     <button>Scan Qr</button>
                 </div>
@@ -174,12 +122,21 @@
         <form action="" method="post">
             <div class="ins">
                 <div class="bloc">
+                <!--    donner ijiwk fl hidden 3andk first w second item sous format [idcard:numberOfCards] or [Coins::]  -->
                     <div class="frm-label"><h3 class="Frm-SubTit">First Item :</h3></div>
-                    <input id="first_item" name="first_item" type="button" onclick="showPopUp('itemToTrade')"  required  value="choose what you want to send  ">
+                    <input type="hidden" id="FI_TypeItem">
+                    <input type="hidden" id="FI_IdCard">
+                    <input type="hidden" id="FI_CardNumber">
+                    <input type="hidden" id="FI_Coins">
+                    <input id="first_item" name="first_item" class="BTN" type="button" onclick="showPopUp('itemToTrade',1)"  required  value="choose what you want to send  ">
                 </div>
                 <div class="bloc">
                     <div class="frm-label"><h3 class="Frm-SubTit">Second item :</h3></div>
-                    <input id="second_item" name="second_item" type="button" onclick="showPopUp('itemToTrade')" required value="choose what you want to send">
+                    <input type="hidden" id="SI_TypeItem">
+                    <input type="hidden" id="SI_IdCard">
+                    <input type="hidden" id="SI_CardNumber">
+                    <input type="hidden" id="SI_Coins">
+                    <input id="second_item" name="second_item" class="BTN" type="button" onclick="showPopUp('itemToTrade',2)" required value="choose what you want to send">
                 </div>
                 
                 
