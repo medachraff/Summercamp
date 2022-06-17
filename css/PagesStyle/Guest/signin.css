@@ -29,6 +29,7 @@ main form .ins .bloc .frm-label {
     margin-bottom: 15px;
 
 }
+/*
 main form input {
     padding: 7% 0 7% 6%;
     background: #FFFFFF;
@@ -37,7 +38,7 @@ main form input {
     border: none;
     width: 100%;
     box-sizing: border-box;
-}
+}*/
 main form .forgot{
     padding-top: 50px;
     font-weight: 100;

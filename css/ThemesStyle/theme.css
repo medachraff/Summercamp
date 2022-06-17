@@ -63,7 +63,7 @@ body {
 
 
 /** Input Box THEME -start    ***/
-input {
+input[type="text"], input[type="password"], input[type="email"]{
     padding: 7% 0 7% 6%;
     background: #FFFFFF;
     border-radius: 10px;
