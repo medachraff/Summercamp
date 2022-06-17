@@ -1,0 +1,70 @@
+main{
+    width: fit-content;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 8.8px;
+}
+@media only screen and (max-width: 400px) {
+    main{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 280px) {
+    main{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.container{
+    width: 128px;
+    height: 232px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    display: inline-block;
+}
+.container img{
+    position: absolute;
+    width: 100%;
+}
+.container .details{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19.9584px;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.container .details .name, .rank{
+    text-align: center;
+    margin: auto;
+    font-size: 18px;
+}
+.container .details .name{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19.9584px;
+    line-height: 24px;
+    color: #FFFFFF;
+
+
+}
+.container .details .rank{
+/* Legendary */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14.9688px;
+line-height: 18px;
+color: #0073FE;
+
+
+}
