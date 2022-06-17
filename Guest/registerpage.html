@@ -18,6 +18,18 @@
     <link rel="stylesheet" href="../css/PagesStyle/Guest/registerpage.css">
     <link rel="stylesheet" href="../css/ThemesStyle/theme.css">
 
+    <!-- Script -->
+    <script>
+        function Next(){
+         
+            for(i=0; i<3; i++){
+                document.getElementById('P'+i).classList.add('hidden')
+            }
+            for(i=3; i<6; i++){
+                document.getElementById('P'+i).classList.remove('hidden')
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -30,14 +42,27 @@
     <main>
         <form action="" method="post">
             <div class="ins">
-            <div class="bloc">
-                <div class="frm-label"><h3 class="Frm-SubTit">Mail :</h3></div>
-                <input id="email-address" name="email" type="email" autocomplete="email" required  placeholder="exemple@outlook.xyz"><br>
-            </div>
-            <div class="bloc">
-                <div class="frm-label"><h3 class="Frm-SubTit">Id :</h3></div>
-                <input id="id" name="id" type="text"  required placeholder="Type your password">
-            </div>
+                <div class="bloc" id="P0">
+                    <button style="width: 100%;" class="main-theme-btn">Scan Qr</button>
+                </div>
+                <div class="bloc" id="P1">
+                    <div class="frm-label"><h3 class="Frm-SubTit">Mail :</h3></div>
+                    <input id="email-address" name="email" type="email" autocomplete="email" required  placeholder="exemple@outlook.xyz"><br>
+                </div>
+                <div class="bloc" id="P2"> 
+                    <button onclick="Next()" class="main-theme-btn">Next</button>
+                </div>
+                <div class="bloc hidden" id="P3">
+                    <div class="frm-label"><h3 class="Frm-SubTit">Password :</h3></div>
+                    <input id="email-address" name="email" type="email" autocomplete="email" required  placeholder="type your password"><br>
+                </div>
+                <div class="bloc hidden"  id="P4">
+                    <div class="frm-label"><h3 class="Frm-SubTit">Confirm password :</h3></div>
+                    <input id="email-address" name="email" type="email" autocomplete="email" required  placeholder="type your password again"><br>
+                </div>
+                <div class="bloc hidden" id="P5"> 
+                    <input type="submit" class="main-theme-btn" value="Register">
+                </div>
             </div>
         </form>
     </main>

@@ -29,3 +29,6 @@ main form .ins .bloc .frm-label {
     margin-bottom: 15px;
 
 }
+.hidden{
+    display: none !important;
+}
