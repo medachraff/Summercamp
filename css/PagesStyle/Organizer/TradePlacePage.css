@@ -1,0 +1,316 @@
+/*** Page Title ***/
+.title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 61px;
+    color: #0073FE;
+   text-align: center;
+   margin-top: 5%;
+
+}
+/**********************************/
+/* Page Trade Container ***/
+.cont{
+    margin-top: 15%;
+    width: 100%;
+    height: 120px;
+    display: flex;
+}
+.cont .blc1{
+    width: 40%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+}
+.cont .blc1 .m-blc1{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    color: #0073FE;
+
+
+}
+.cont .blc1 .m-blc2{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont .blc1 .m-blc2 button{
+    box-sizing: border-box;
+    width: 90%;
+    height: 70%;
+    background: transparent;
+    border: 5px solid #FFFFFF;
+    border-radius: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    color: #FFFFFF;
+
+
+}
+.cont .blc2{
+    width: 20%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/**********************************/
+/*** Page Form ****/
+.bloc{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6%;
+}
+main form .ins .bloc .frm-label {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 15px;
+
+}
+input[type="button"]{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: left;
+color: #D2D2D2;
+
+}
+.disabled{
+    background-color: #6D6D6D !important;
+    cursor: not-allowed;
+}
+/**********************************/
+
+/****** P O P UP ******************/
+.popUp{
+    background-color: rgba(0, 0, 0, 0.729);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    color:white;
+    left: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.popUp .box{
+    display: none;
+    background-color: black;
+    box-shadow: 0px 4px 15px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    height: 60%;
+    background: #242424;
+    border-radius: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+    padding: 12% 0%;
+    height: fit-content;
+}
+@media only screen and (max-width: 400px) {
+    .popUp .box{
+        width: 100%;
+    }
+}
+
+.popUp .title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    color: #FFFFFF;
+
+
+} 
+
+.popUp .box .close{
+    background-color: rgb(29, 104, 244);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 2%;
+    top: 2%;
+
+}
+.popUp  form{
+    margin-top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.popUp  #txt{
+    width: 75%;
+    padding: 5% 12%;
+}
+.popUp  #btn{
+    margin-top: 4%;
+    width: 75%;
+}
+/**** PopUp Item To Trade ****/
+.popUp #itemToTrade{
+    display: none;
+}
+.popUp #itemToTrade .btns{
+    margin-top: 8%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.popUp #itemToTrade .btns button{
+    width: 40%;
+    background-color: #595959;
+    height: 100%;
+    box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5%;
+
+}
+.popUp #itemToTrade .btns img{
+    width: 60%;
+}
+.popUp #itemToTrade .btns img.pn{
+    width: 40%;
+}
+.popUp #itemToTrade .btns p{
+    margin-top: 12%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+/**** Pop Up Coin ***/
+.popUp #CoinPopUP{
+    display: none;
+
+}
+/**** Pop Up Card ***/
+.popUp #CardsPopUP{
+    display: none;
+}
+/**** Pop Up Card Counter ***/
+
+.popUp .counter{
+    margin-top: 8%;
+    margin-bottom: 7%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.popUp .counter .countDig{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 52.1739px;
+    color: #FFFFFF;
+}
+.popUp .counter .min, .popUp .counter .add{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    color: #0073FE;
+    cursor: pointer;
+    user-select: none;
+}
+/**** Pop Up Card Search ***/
+.popUp #SearchCardsPopUP{
+    display: none;
+
+}
+
+/**** Pop Up Card Search  Containers Of Pics***/
+.conts{
+    width: fit-content;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 8.8px;
+    position: relative;
+    margin-top: 10%;
+}
+@media only screen and (max-width: 400px) {
+    .conts{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.container{
+    width: 128px;
+    height: 232px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    display: inline-block;
+}
+.container img{
+    position: absolute;
+    width: 100%;
+}
+.container .details{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19.9584px;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.container .details .name, .rank{
+    text-align: center;
+    margin: auto;
+    font-size: 18px;
+}
+.container .details .name{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19.9584px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.container .details .rank{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14.9688px;
+line-height: 18px;
+color: #0073FE;
+}
+/**********************************/

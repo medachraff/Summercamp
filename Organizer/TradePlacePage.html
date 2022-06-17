@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Place</title>
+    <link rel="shortcut icon" href="rsc/!logo.png">
+
+    <!-- FONTS -->
+        <!-- Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap" rel="stylesheet">  
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="../css/LayoutsStyle/layout-1.css">
+    <link rel="stylesheet" href="../css/ThemesStyle/theme.css">
+    <link rel="stylesheet" href="../css/PagesStyle/Organizer/TradePlacePage.css">
+
+
+    <!-- Script -->
+    <script src="../scripts/organizer/TradeSystem.js"></script>
+</head>
+<body>
+    <header id="header">
+            <div class="logo-mtc">
+                <img src="../rsc/pics/!logo.png" alt="MTC Logo">
+            </div>
+            <div class="prev">
+              <a href="#">< Back</a> 
+            </div>
+    </header>
+    <!--  POPS UP-start   -->
+<div class="popUp" id="popUp">
+    <div class="box" id="itemToTrade">
+        <div class="close" onclick="HideAllPopUp()">X</div>
+        <div class="title" id="title">Choose</div>
+        <div class="btns">
+            <button onclick="showPopUp('CoinPopUP')">
+                <img src="../rsc/pics/mtc coin.png" alt="">
+                <p>Coin</p>
+            </button>
+            <button onclick="showPopUp('CardsPopUP')">
+                <img class="pn" src="../rsc/pics/card.png" alt="">
+                <p>Card</p>
+            </button>
+        </div>
+    </div>
+    <div class="box" id="CoinPopUP">
+        <div class="close" onclick="HideAllPopUp()">X</div>
+        <div class="title" id="title">Coins:</div>
+        <form action="" method="post">
+            <input type="text" name="coin" id="txt" placeholder="Enter the budget">
+            <input id="btn" class="main-theme-btn" type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="box" id="CardsPopUP">
+        <div class="close" onclick="HideAllPopUp()">X</div>
+        <div class="title" id="title">Cards:</div>
+        <form action="" method="post">
+            <input type="button" name="coin" id="txt" onclick="showPopUp('SearchCardsPopUP')" placeholder="Search for....">
+            <div class="counter">
+                <div class="min" onclick="MinCount()">-</div>
+                <div class="countDig" id="COUNTER">0</div>
+                <div class="add" onclick="AddCount()">+</div>
+            </div>
+            <input id="btn" class="main-theme-btn" type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="box" id="SearchCardsPopUP">
+        <div class="close" onclick="HideAllPopUp(1)">X</div>
+            <input type="text" name="coin" id="txt" placeholder="Search for the card">
+            <div class="conts">
+                <div class="container">
+                    <img src="../rsc/pics/pictures-member/unknown.png" alt="">
+                    <div class="details">
+                        <div class="name">The Amir</div>
+                        <div class="rank">Legendary</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="../rsc/pics/pictures-member/unknown.png" alt="">
+                    <div class="details">
+                        <div class="name">The Amir</div>
+                        <div class="rank">Legendary</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="../rsc/pics/pictures-member/unknown.png" alt="">
+                    <div class="details">
+                        <div class="name">The Amir</div>
+                        <div class="rank">Legendary</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="../rsc/pics/pictures-member/unknown.png" alt="">
+                    <div class="details">
+                        <div class="name">The Amir</div>
+                        <div class="rank">Legendary</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="../rsc/pics/pictures-member/unknown.png" alt="">
+                    <div class="details">
+                        <div class="name">The Amir</div>
+                        <div class="rank">Legendary</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="../rsc/pics/pictures-member/unknown.png" alt="">
+                    <div class="details">
+                        <div class="name">The Amir</div>
+                        <div class="rank">Legendary</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="../rsc/pics/pictures-member/unknown.png" alt="">
+                    <div class="details">
+                        <div class="name">The Amir</div>
+                        <div class="rank">Legendary</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="../rsc/pics/pictures-member/unknown.png" alt="">
+                    <div class="details">
+                        <div class="name">The Amir</div>
+                        <div class="rank">Legendary</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="../rsc/pics/pictures-member/unknown.png" alt="">
+                    <div class="details">
+                        <div class="name">The Amir</div>
+                        <div class="rank">Legendary</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="../rsc/pics/pictures-member/unknown.png" alt="">
+                    <div class="details">
+                        <div class="name">The Amir</div>
+                        <div class="rank">Legendary</div>
+                    </div>
+                </div>
+                
+            </div>
+        </form>
+    </div>
+</div>
+<!--  POPS UP-end   -->
+    <main id="main">
+
+
+
+    <div class="title">Trade Place</div>
+        <div class="cont">
+            <div class="blc1">
+                <div class="m-blc1">Hunter1</div>
+                <div class="m-blc2">
+                    <button>Scan Qr</button>
+                </div>
+            </div>
+            <div class="blc2">
+                <img src="../rsc/pics/transaction.png" alt="">
+            </div>
+            <div class="blc1">
+                <div class="m-blc1">Hunter1</div>
+                <div class="m-blc2">
+                    <button>Scan Qr</button>
+                </div>
+            </div>
+        </div>
+        <form action="" method="post">
+            <div class="ins">
+                <div class="bloc">
+                    <div class="frm-label"><h3 class="Frm-SubTit">First Item :</h3></div>
+                    <input id="first_item" name="first_item" type="button" onclick="showPopUp('itemToTrade')"  required  value="choose what you want to send  ">
+                </div>
+                <div class="bloc">
+                    <div class="frm-label"><h3 class="Frm-SubTit">Second item :</h3></div>
+                    <input id="second_item" name="second_item" type="button" onclick="showPopUp('itemToTrade')" required value="choose what you want to send">
+                </div>
+                
+                
+                <div class="bloc">
+                    <input type="submit" value="Submit" class="main-theme-btn disabled" disabled>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer id="footer">
+        <h2>Summer Camp MTC 2022</h2>
+    </footer>
+</body>
+</html>
