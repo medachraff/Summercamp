@@ -1,3 +1,6 @@
+*{
+    text-decoration: none;
+}
 /**   B O D Y-start    ****/
 body {
     width: 400px;
