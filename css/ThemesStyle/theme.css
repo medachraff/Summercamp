@@ -79,3 +79,12 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
 
 }
 /** Input Box THEME -end    ***/
+.alert{
+    font-size: 14px;
+}
+.alert ul{
+    list-style: none;
+}
+.alert.alert-danger ul li{
+    color: red;
+}
