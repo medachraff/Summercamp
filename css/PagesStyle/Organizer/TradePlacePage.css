@@ -166,7 +166,7 @@ color: #D2D2D2;
     flex-direction: column;
     width: 100%;
 }
-.popUp  #txt{
+.popUp  #txt_card, .popUp  #txt{
     width: 75%;
     padding: 5% 12%;
 }
