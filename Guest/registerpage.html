@@ -19,9 +19,12 @@
     <link rel="stylesheet" href="../css/ThemesStyle/theme.css">
 
     <!-- Script -->
+    <script src="registerpage.js"></script>
     <script>
         function Next(){
-         
+            document.getElementById("qr-reader").style.height = 0;
+            document.getElementById("qr-reader").style.visibility = "hidden";
+
             for(i=0; i<3; i++){
                 document.getElementById('P'+i).classList.add('hidden')
             }
@@ -40,11 +43,14 @@
         </div>
     </header>
     <main>
+      
+        
         <form action="" method="post">
             <div class="ins">
                 <div class="bloc" id="P0">
-                    <button style="width: 100%;" class="main-theme-btn">Scan Qr</button>
+                    <button style="width: 100%;" class="main-theme-btn" onclick="">Scan Qr</button>
                 </div>
+                <div id="qr-reader" style="width: 350px ; margin-top: 20px;margin-bottom: 20px;"></div>
                 <div class="bloc" id="P1">
                     <div class="frm-label"><h3 class="Frm-SubTit">Mail :</h3></div>
                     <input id="email-address" name="email" type="email" autocomplete="email" required  placeholder="exemple@outlook.xyz"><br>
@@ -65,6 +71,10 @@
                 </div>
             </div>
         </form>
+        <!-- Code Qr code : -->
+      <script src="https://unpkg.com/html5-qrcode@2.0.9/dist/html5-qrcode.min.js"></script>
+      <!-- redirection js qr -->
+      <script src="../scripts/Guest/registerpage.js"></script>
     </main>
     <footer>
         <p>Summer Camp MTC 2022</p>
