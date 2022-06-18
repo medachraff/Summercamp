@@ -1,4 +1,4 @@
-function showPopUp(id, rank, name, points){
+function showPopUp(rank, name, points){
     document.getElementById("popUp").style.display = "flex";
     document.getElementById("title").innerHTML =  "#"+rank;
     document.getElementById("name").innerHTML = name ;
