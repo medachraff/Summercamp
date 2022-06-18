@@ -76,3 +76,18 @@ color: #0073FE;
     width: 100%;
     bottom: 0;
 }
+.Count{
+    position: absolute;
+    right: 6%;
+    top: 3%;
+    color: white;
+    background-color: #0073FE;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
