@@ -13,7 +13,7 @@ class TradeSys{
         return document.getElementById(id)
     }
     showPopUp(PopUpName, para="none"){
-        //HideAllPopUp("unset")
+        
         if(PopUpName!="SearchCardsPopUP"){
             this.element("popUp").style.display = "flex";
             this.element(PopUpName).style.display = "flex";
@@ -25,6 +25,7 @@ class TradeSys{
             }
             this.element("coins").value = this.Coins;
         }else{
+            this.element('CardsPopUP').style.display = "none"
             this.element("header").style.display = "none";
             this.element("main").style.display = "none";
             this.element("footer").style.display = "none";
@@ -62,7 +63,6 @@ class TradeSys{
         this.typeTrade = "Coins"
         this.FillHiddenWithDataLiSidkHoussem()
     }
-
     addCardsNumber(){
         this.Count = Number(this.element("COUNTER").innerHTML)+1
         this.element("COUNTER").innerHTML = this.Count;
@@ -95,7 +95,6 @@ class TradeSys{
             this.typeTrade = "Cards"
             this.FillHiddenWithDataLiSidkHoussem()
         }
-        
     }
     FillHiddenWithDataLiSidkHoussem(){
         if (this.InputNumber==1){
@@ -130,6 +129,7 @@ function search(){
     }
 }
 function OpenQr(QrNum){
+    document.getElementById('qr').setAttribute('style', '')
     document.getElementById("popUp").style.display = "flex";
     document.getElementById('BTN_QR_DONE').setAttribute('onclick', 'Done('+QrNum+')')
 }

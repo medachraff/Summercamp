@@ -321,3 +321,22 @@ line-height: 18px;
 color: #0073FE;
 }
 /**********************************/
+#qr-reader button{
+    background-color: #0074D9;
+    padding: 3%;
+    border: none;
+}
+#qr-reader select{
+    background-color: #0074D9;
+    padding: 3%;
+    border: none;
+
+}
+#qr-reader__dashboard_section_swaplink {
+    padding: 5% ;
+}
+#qr-reader__filescan_input{
+    display: block;
+    width: 200px;
+    margin: auto;
+}
