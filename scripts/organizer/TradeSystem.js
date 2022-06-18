@@ -129,23 +129,18 @@ function search(){
     }
 }
 function OpenQr(QrNum){
+    openQr()
     document.getElementById('qr').setAttribute('style', '')
+    document.getElementById('ScanNow').setAttribute('value', QrNum)
     document.getElementById("popUp").style.display = "flex";
-    document.getElementById('BTN_QR_DONE').setAttribute('onclick', 'Done('+QrNum+')')
+    //document.getElementById('BTN_QR_DONE').setAttribute('onclick', 'Done('+QrNum+')')
 }
 function CloseQr(){
     document.getElementById("popUp").style.display = "none";
+    document.getElementById('qr').setAttribute('style', 'display:none;')
 }
-function Done(QrNum){
+function Done(QrNum, msg){
     CloseQr()
-    document.getElementById('Btn_'+QrNum).innerHTML = "ScanQr_"+QrNum
+    document.getElementById('QrValue_'+QrNum).innerHTML = msg
+    document.getElementById('Btn_'+QrNum).innerHTML = "Done"
 }
-function onScanSuccess(decodedText, decodedResult) {
-    console.log(`Code scanned = ${decodedText}`, decodedResult);
-    document.getElementById('QrCodeTXT').value = decodedText;
-    document.getElementById('qr-reader').style.display = 'none';
-    document.getElementById('titleQRdONE').style.display = 'block';
-}
-var html5QrcodeScanner = new Html5QrcodeScanner(
- "qr-reader", { fps: 10, qrbox: 250 });
-html5QrcodeScanner.render(onScanSuccess);

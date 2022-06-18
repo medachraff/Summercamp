@@ -29,6 +29,7 @@
     </script>
 </head>
 <body>
+    <input type="hidden" id="ScanNow">
     <header id="header">
             <div class="logo-mtc">
                 <img src="../rsc/pics/!logo.png" alt="MTC Logo">
@@ -44,7 +45,7 @@
                     <div class="m-blc1">Hunter1</div>
                     <div class="m-blc2">
                         <div id="Btn_1" class="QrBTN" onclick="OpenQr(1)">Scan Qr</div>
-                        <input type="hidden" name="QrValue_1">
+                        <input type="hidden" id="QrValue_1">
                     </div>
                 </div>
                 <div class="blc2">
@@ -54,7 +55,7 @@
                     <div class="m-blc1">Hunter2</div>
                     <div class="m-blc2">
                         <div id="Btn_2" class="QrBTN" onclick="OpenQr(2)">Scan Qr</div>
-                        <input type="hidden" name="QrValue_2">
+                        <input type="hidden" id="QrValue_2">
                     </div>
                 </div>
             </div>
@@ -161,8 +162,20 @@
          </div>
          <script src="https://unpkg.com/html5-qrcode"></script>
          <!-- redirection js qr -->
-         <script src="../scripts/Guest/registerpage.js"></script>
-<!--  POPS UP-end   -->
+         <script>
+            
+        function openQr(){
+            function onScanSuccess(decodedText, decodedResult) {
+                Done(document.getElementById('ScanNow').getAttribute('value'), decodedText)
+                html5QrcodeScanner.clear();
+            }
+            var html5QrcodeScanner = new Html5QrcodeScanner(
+            "qr-reader", { fps: 10, qrbox: 250 });
+            html5QrcodeScanner.render(onScanSuccess);
+        }
+        
+         </script>
+         <!--  POPS UP-end   -->
 
     </body>
     </html>
