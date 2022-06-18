@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="../css/ThemesStyle/theme.css">
 
     <!-- Script -->
-    <script src="registerpage.js"></script>
     <script>
         function Next(){
             document.getElementById("qr-reader").style.height = 0;
@@ -48,9 +47,11 @@
         <form action="" method="post">
             <div class="ins">
                 <div class="bloc" id="P0">
-                    <button style="width: 100%;" class="main-theme-btn" onclick="">Scan Qr</button>
                 </div>
-                <div id="qr-reader" style="width: 600px"></div>
+                <div id="qr-reader" style="width: 100%;margin: 20px;"></div>
+                <div id="titleQRdONE">Scanning QrCode Success</div>
+
+                <input type="hidden" id="QrCodeTXT">
                 <div class="bloc" id="P1">
                     <div class="frm-label"><h3 class="Frm-SubTit">Mail :</h3></div>
                     <input id="email-address" name="email" type="email" autocomplete="email" required  placeholder="exemple@outlook.xyz"><br>
