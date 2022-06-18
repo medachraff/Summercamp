@@ -1,0 +1,130 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.head_title{
+    margin: 10% 0%;
+    padding-bottom: 4%;
+    border-bottom: 2px solid white;
+    width: 100%;
+}
+.head_title .name{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 61px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.head_title .id{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 36px;
+text-align: center;
+color: #D2D2D2;
+}
+.bloc{
+    margin-top: 5%;
+    width: 100%;
+}
+.bloc .b_title{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 36px;
+text-align: left;
+color: #0073FE;
+display: flex;
+justify-content: start;
+align-items: center;
+}
+.bloc .b_title .items{
+    width: 100%;
+}
+.bloc .items .item{
+    box-sizing: border-box;
+    margin: 3% 0%;
+    padding: 5%;
+    width: 100%;
+    border-top: 0.5px solid white;
+}
+.bloc .items .item .name{
+    width: 100%;
+}
+.cards{
+    width: fit-content;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 8.8px;
+    margin-top: 8%;
+}
+@media only screen and (max-width: 400px) {
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 280px) {
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.container{
+    width: 128px;
+    height: 232px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    display: inline-block;
+}
+.container img{
+    position: absolute;
+    width: 100%;
+}
+.container .details{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19.9584px;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.container .details .name, .rank{
+    text-align: center;
+    margin: auto;
+    font-size: 18px;
+}
+.container .details .name{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19.9584px;
+    line-height: 24px;
+    color: #FFFFFF;
+
+
+}
+.container .details .rank{
+/* Legendary */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14.9688px;
+line-height: 18px;
+color: #0073FE;
+
+
+}
