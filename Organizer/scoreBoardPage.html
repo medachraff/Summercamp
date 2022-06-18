@@ -40,31 +40,36 @@
                 </div>
             </div>
         </div>
+        <br>
+        <input type="text" name="" id="searchwords" placeholder="Search ..." onkeyup="updateView()">
+        <br>
+        <br>    
         <div class="view" id="views">
-            <div class="lab" onclick="showPopUp('20', '125', 'You', '200')">
+            <div class="lab" id="lab1" onclick="showPopUp('20', '125', 'You', '200')">
                 <h1 class="rank">#125</h1>
                 <p class="details">
                     <!-- ya houssem houni ma tensech bch t7ot id el member li koll k3baa
                      3andk el rank w el name w el score TENSECHHHHHHHHHH !!!!!!!!!!-->
-                    <h2 class="name">You</h2>
+                    <h2 class="name" id="n1">You</h2>
                     <h2 class="score" >200 points</h2>
                 </p>
             </div>
-            <div class="lab" onclick="showPopUp('25', '15', 'Aziz', '600')">
+            <div class="lab" id="lab2" onclick="showPopUp('25', '15', 'Aziz', '600')">
                 <h1 class="rank">#15</h1>
                 <p class="details">
-                    <h2 class="name" >Aziz</h2>
+                    <h2 class="name" id="n2">Aziz</h2>
                     <h2 class="score">600 points</h2>
                 </p>
             </div>
-            <div class="lab" onclick="showPopUp('3', '1', 'Houssem', '2000')">
-                <h1 class="rank" id="r3">#1</h1>
+            <div class="lab" id="lab3" onclick="showPopUp('3', '1', 'Houssem', '2000')">
+                <h1 class="rank">#1</h1>
                 <p class="details">
-                    <h2 class="name">Houssem</h2>
+                    <h2 class="name" id="n3">Houssem</h2>
                     <h2 class="score">2000 points</h2>
                 </p>
             </div>
         </div>
+        
         
        
     </main>
