@@ -1,3 +1,14 @@
+.title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 61px;
+    color: #0073FE;
+   text-align: center;
+   margin-top: 5%;
+
+}
 form{
     display: flex;
     flex-direction: column;
