@@ -129,3 +129,14 @@ function search(){
         }
     }
 }
+function OpenQr(QrNum){
+    document.getElementById("popUp").style.display = "flex";
+    document.getElementById('BTN_QR_DONE').setAttribute('onclick', 'Done('+QrNum+')')
+}
+function CloseQr(){
+    document.getElementById("popUp").style.display = "none";
+}
+function Done(QrNum){
+    CloseQr()
+    document.getElementById('Btn_'+QrNum).innerHTML = "ScanQr_"+QrNum
+}

@@ -43,7 +43,8 @@
                 <div class="blc1">
                     <div class="m-blc1">Hunter1</div>
                     <div class="m-blc2">
-                        <button>Scan Qr</button>
+                        <div id="Btn_1" class="QrBTN" onclick="OpenQr(1)">Scan Qr</div>
+                        <input type="hidden" name="QrValue_1">
                     </div>
                 </div>
                 <div class="blc2">
@@ -52,7 +53,8 @@
                 <div class="blc1">
                     <div class="m-blc1">Hunter2</div>
                     <div class="m-blc2">
-                        <button>Scan Qr</button>
+                        <div id="Btn_2" class="QrBTN" onclick="OpenQr(2)">Scan Qr</div>
+                        <input type="hidden" name="QrValue_2">
                     </div>
                 </div>
             </div>
@@ -87,7 +89,16 @@
 
     <!--  POPS UP-start   -->
     <input type="hidden" id="selectedInput">
+        
         <div class="popUp" id="popUp">
+            <div class="box" id="qr">
+                <div class="close" onclick="CloseQr()">X</div>
+                <div id="QrCode">
+                    <!-- QR CODE HEREEEEEEEEEEEE YA ACHREFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF-->
+
+                    <input type="button" style="color:white;text-align: center;" value="Done" id="BTN_QR_DONE" class="main-theme-btn ">
+                </div>
+            </div>
             <div class="box" id="itemToTrade">
                  <div class="close" onclick="F.HideAllPopUp()">X</div>
                  <div class="title" id="title">Choose</div>
@@ -145,8 +156,6 @@
                                  <div class="rank">Legendary</div>
                              </div>
                          </div>
-                         
-                         
                      </div>
                  </form>
              </div>
