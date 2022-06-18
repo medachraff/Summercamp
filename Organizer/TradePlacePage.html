@@ -127,8 +127,9 @@
              </div>
              <div class="box" id="SearchCardsPopUP">
                  <div class="close" onclick="F.HideAllPopUp('Reset')">X</div>
-                     <input type="text" name="coin" id="txt" placeholder="Search for the card">
-                     <div class="conts">
+                 
+                     <input type="text" name="coin" id="txt" placeholder="Search for the card" onkeyup="search()">
+                     <div class="conts" id="views">
                         <!--Houni Lezmk tb3thli el id w el name mt3 el card lel func selectCard-->
                          <div class="container" onclick="F.selectCard('2154', 'The Amir')">
                              <img src="../rsc/pics/pictures-member/unknown.png" alt="">

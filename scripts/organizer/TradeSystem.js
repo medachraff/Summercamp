@@ -69,7 +69,7 @@ class TradeSys{
     }
     minCardsNumber(){
         this.Count = Number(this.element("COUNTER").innerHTML)-1;
-        if(this.Count<0){
+        if(this.Count<=0){
             this.Count = 0   
         }
         this.element("COUNTER").innerHTML = this.Count;
@@ -83,16 +83,19 @@ class TradeSys{
         this.IdCard = IdCard
     }
     setCard(){
-        this.HideAllPopUp()
-        if(this.InputNumber==1){
-            this.InputId = "first_item"
-        }else{
-            this.InputId = "second_item"
+        if(this.Count!=0&&this.CardName!="Search for...."){
+            this.HideAllPopUp()
+            if(this.InputNumber==1){
+                this.InputId = "first_item"
+            }else{
+                this.InputId = "second_item"
+            }
+            this.element(this.InputId).value= this.CardName+ " x"+ this.Count;
+            this.element(this.InputId).style.color= "black";
+            this.typeTrade = "Cards"
+            this.FillHiddenWithDataLiSidkHoussem()
         }
-        this.element(this.InputId).value= this.CardName+ " x"+ this.Count;
-        this.element(this.InputId).style.color= "black";
-        this.typeTrade = "Cards"
-        this.FillHiddenWithDataLiSidkHoussem()
+        
     }
     FillHiddenWithDataLiSidkHoussem(){
         if (this.InputNumber==1){
@@ -109,6 +112,20 @@ class TradeSys{
         }else{
             this.element(this.pfx+"_IdCard").value = this.IdCard
             this.element(this.pfx+"_CardNumber").value = this.Count
+        }
+    }
+}
+
+function search(){
+    searchwords = document.getElementById('txt').value;
+    var container_div = document.getElementById('views')
+    for(i=0; i<container_div.getElementsByClassName("container").length; i++){
+        if(searchwords==""){
+            document.getElementById('views').getElementsByClassName("container")[i].style.display = "flex"
+        }    
+        e= document.getElementById('views').getElementsByClassName("container")[i].getElementsByClassName('details')[0].getElementsByClassName('name')[0].innerHTML.toUpperCase();
+        if(e.indexOf(searchwords.toUpperCase())==-1){
+            document.getElementById('views').getElementsByClassName("container")[i].style.display = "none"
         }
     }
 }
