@@ -1,6 +1,6 @@
 
 ::-webkit-scrollbar{display: none;}
-.task{
+.trans{
     width: 100%;
     height: fit-content;
     padding: 4% 0%;
@@ -9,19 +9,19 @@
     border-right: none;
     border-bottom: none;
 }
-.task .sub1{
+.trans .sub1{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.task .sub3{
+.trans .sub3{
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
 }
 
 
-.task .title{
+.trans .title{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -30,14 +30,14 @@
     margin-left: 2%;
 
 }
-.task .score{
+.trans .score{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     color: #FFFFFF;
 }
-.task .txt{
+.trans .txt{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -46,7 +46,7 @@
     margin-left: 2%;
 
 }
-.task .dt{
+.trans .dt{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;

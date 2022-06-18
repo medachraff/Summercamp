@@ -11,6 +11,12 @@
 
 }
 /**********************************/
+.QrBTN{
+    background-color: blueviolet;
+    padding: 6%;
+    border-radius: 15px;
+    cursor: pointer;
+}
 /* Page Trade Container ***/
 .cont{
     margin-top: 15%;
@@ -156,6 +162,7 @@ color: #D2D2D2;
     position: absolute;
     right: 2%;
     top: 2%;
+    cursor: pointer;
 
 }
 .popUp  form{
@@ -166,7 +173,7 @@ color: #D2D2D2;
     flex-direction: column;
     width: 100%;
 }
-.popUp  #txt{
+.popUp  #txt_card, .popUp  #txt{
     width: 75%;
     padding: 5% 12%;
 }
