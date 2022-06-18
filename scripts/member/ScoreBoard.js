@@ -12,13 +12,13 @@ function HidePopUp(){
 function updateView(){
     searchwords = document.getElementById('searchwords').value;
     var container_div = document.getElementById('views')
-    for(i=1; i<=container_div.getElementsByTagName('div').length; i++){
+    for(i=0; i<container_div.getElementsByTagName('div').length; i++){
         if(searchwords==""){
-            document.getElementById('lab'+i).style.display = "block"
+            document.getElementById('views').getElementsByClassName("lab")[i].style.display = "flex"
         }
-        if(document.getElementById('n'+i).innerHTML.toUpperCase().indexOf(searchwords.toUpperCase())==-1){
-            document.getElementById('lab'+i).style.display = "none"
+        e= document.getElementById('views').getElementsByClassName("lab")[i].getElementsByClassName('details')[0].getElementsByClassName('name')[0].innerHTML.toUpperCase();
+        if(e.indexOf(searchwords.toUpperCase())==-1){
+            document.getElementById('views').getElementsByClassName("lab")[i].style.display = "none"
         }
     }
 }
-

@@ -5,7 +5,9 @@
     border-bottom: none;
     color: white;
 }
-
+span{
+    display: block;
+}
 .lab{
     display: flex;
     justify-content: space-between;
