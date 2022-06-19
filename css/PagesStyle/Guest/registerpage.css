@@ -132,3 +132,22 @@ color: #0073FE;
    margin-top: 5%;
    display: none;
 }
+#qr-reader button{
+    background-color: #0074D9;
+    padding: 3%;
+    border: none;
+}
+#qr-reader select{
+    background-color: #0074D9;
+    padding: 3%;
+    border: none;
+
+}
+#qr-reader__dashboard_section_swaplink {
+    padding: 5% ;
+}
+#qr-reader__filescan_input{
+    display: block;
+    width: 200px;
+    margin: auto;
+}

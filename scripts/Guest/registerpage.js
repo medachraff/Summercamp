@@ -1,10 +1,14 @@
-function onScanSuccess(decodedText, decodedResult) {
-    console.log(`Code scanned = ${decodedText}`, decodedResult);
-    document.getElementById('QrCodeTXT').value = decodedText;
-    document.getElementById('qr-reader').style.display = 'none';
-    document.getElementById('titleQRdONE').style.display = 'block';
+function OpenQR(){
+    StartScanner()
+    document.getElementById('qr').setAttribute('style', '')
+    document.getElementById("popUp").style.display = "flex";
 }
-
-var html5QrcodeScanner = new Html5QrcodeScanner(
- "qr-reader", { fps: 10, qrbox: 250 });
-html5QrcodeScanner.render(onScanSuccess);
+function CloseQr(){
+    document.getElementById("popUp").style.display = "none";
+    document.getElementById('qr').setAttribute('style', 'display:none;')
+}
+function Done(msg){
+    CloseQr()
+    document.getElementById('QrCodeTXT').value = msg
+    document.getElementById('titleQRdONE').style.display = "block"
+}

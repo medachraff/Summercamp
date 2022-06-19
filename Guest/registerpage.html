@@ -1,87 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to Summer Camp MTC 2022</title>
-    <link rel="shortcut icon" href="rsc/!logo.png">
+    <link rel="shortcut icon" href="rsc/!logo.png" />
 
     <!-- FONTS -->
-        <!-- Inter -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap" rel="stylesheet">  
+    <!-- Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- STYLE -->
-    <link rel="stylesheet" href="../css/LayoutsStyle/layout-0.css">
-    <link rel="stylesheet" href="../css/PagesStyle/Guest/registerpage.css">
-    <link rel="stylesheet" href="../css/ThemesStyle/theme.css">
+    <link rel="stylesheet" href="../css/LayoutsStyle/layout-0.css" />
+    <link rel="stylesheet" href="../css/PagesStyle/Guest/registerpage.css" />
+    <link rel="stylesheet" href="../css/ThemesStyle/theme.css" />
 
     <!-- Script -->
+    <script src="../scripts/guest/registerpage.js"></script>
     <script>
-        function Next(){
-            document.getElementById("qr-reader").style.height = 0;
-            document.getElementById("qr-reader").style.visibility = "hidden";
+      function Next() {
+       // document.getElementById("qr-reader").style.height = 0;
+        //document.getElementById("qr-reader").style.visibility = "hidden";
+        if(document.getElementById('QrCodeTXT').value.length!=0&&document.getElementById('email').value.length){
+            document.getElementById('titleQRdONE').style.display = "none"
 
-            for(i=0; i<3; i++){
-                document.getElementById('P'+i).classList.add('hidden')
-            }
-            for(i=3; i<6; i++){
-                document.getElementById('P'+i).classList.remove('hidden')
+            for (i = 0; i < 6; i++) {
+            if(i<3){
+                document.getElementById("P" + i).classList.add("hidden");
+            }else{
+                document.getElementById("P" + i).classList.remove("hidden");
+
             }
         }
+        }
+        
+
+      }
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="logos">
-            <div class="logo-mtc">
-                <img src="../rsc/pics/!logo.png" alt="MTC Logo">
-            </div>
+      <div class="logos">
+        <div class="logo-mtc">
+          <img src="../rsc/pics/!logo.png" alt="MTC Logo" />
         </div>
+      </div>
     </header>
     <main>
-      
-        
-        <form action="" method="post">
-            <div class="ins">
-                <div class="bloc" id="P0">
-                </div>
-                <div id="qr-reader" style="width: 100%;margin: 20px;"></div>
-                <div id="titleQRdONE">Scanning QrCode Success</div>
-                <div class="bloc" id="P1">
-                    <div class="frm-label"><h3 class="Frm-SubTit">Mail :</h3></div>
-                    <input id="email-address" name="email" type="email" autocomplete="email" required  placeholder="exemple@outlook.xyz"><br>
-                </div>
-                <input type="hidden" id="QrCodeTXT">
-                <div class="bloc" id="P1">
-                    <div class="frm-label"><h3 class="Frm-SubTit">Mail :</h3></div>
-                    <input id="email-address" name="email" type="email" autocomplete="email" required  placeholder="exemple@outlook.xyz"><br>
-                </div>
-                <div class="bloc" id="P2"> 
-                    <button onclick="Next()" class="main-theme-btn">Next</button>
-                </div>
-                <div class="bloc hidden" id="P3">
-                    <div class="frm-label"><h3 class="Frm-SubTit">Password :</h3></div>
-                    <input id="email-address" name="email" type="email" autocomplete="email" required  placeholder="type your password"><br>
-                </div>
-                <div class="bloc hidden"  id="P4">
-                    <div class="frm-label"><h3 class="Frm-SubTit">Confirm password :</h3></div>
-                    <input id="email-address" name="email" type="email" autocomplete="email" required  placeholder="type your password again"><br>
-                </div>
-                <div class="bloc hidden" id="P5"> 
-                    <input type="submit" class="main-theme-btn" value="Register">
-                </div>
+      <form action="" method="post" onsubmit="return ">
+        <div class="ins">
+          <div class="bloc" id="P0">
+            <input style="width: 100%" type="button" class="main-theme-btn" onclick="OpenQR()" value="Scan Qr">
+          </div>
+          <div id="titleQRdONE">Scanning QrCode Success</div>
+
+          <input type="hidden" id="QrCodeTXT" />
+          <div class="bloc" id="P1">
+            <div class="frm-label"><h3 class="Frm-SubTit">Mail :</h3></div>
+            <input
+              name="email"
+            type="email"
+                id="email"  
+              required
+              placeholder="exemple@outlook.xyz"
+            /><br />
+          </div>
+          <div class="bloc" id="P2">
+            <input onclick="Next()" style="text-align: center;" class="main-theme-btn" value="Next">
+          </div>
+          <div class="bloc hidden" id="P3">
+            <div class="frm-label"><h3 class="Frm-SubTit">Password :</h3></div>
+            <input
+              name="pass"
+              type="password"
+              required
+
+              placeholder="type your password"
+            /><br />
+          </div>
+          <div class="bloc hidden" id="P4">
+            <div class="frm-label">
+              <h3 class="Frm-SubTit">Confirm password :</h3>
             </div>
-        </form>
-        <!-- Code Qr code : -->
-        <script src="https://unpkg.com/html5-qrcode"></script>
+            <input
+              name="cpc"
+              type="password"
+              required
+              placeholder="type your password again"
+            /><br />
+          </div>
+          <div class="bloc hidden" id="P5">
+            <input type="submit" class="main-theme-btn" value="Register" />
+          </div>
+        </div>
+      </form>
+      <!-- Code Qr code : -->
+      <script src="https://unpkg.com/html5-qrcode"></script>
       <!-- redirection js qr -->
       <script src="../scripts/Guest/registerpage.js"></script>
     </main>
     <footer>
-        <p>Summer Camp MTC 2022</p>
+      <p>Summer Camp MTC 2022</p>
     </footer>
-</body>
+
+    <div class="popUp" id="popUp">
+      <div class="box" id="qr" style="display: none !important">
+        <div class="close" onclick="CloseQr()">X</div>
+        <div id="QrCode" style="padding: 5%">
+          <!-- QR CODE HEREEEEEEEEEEEE YA ACHREFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF-->
+          <div id="qr-reader" style="width: 100%"></div>
+        </div>
+      </div>
+    </div>
+<script>
+    function StartScanner(){
+        function onScanSuccess(decodedText, decodedResult) {
+            Done(decodedText)
+            html5QrcodeScanner.clear();
+
+
+        }
+    var html5QrcodeScanner = new Html5QrcodeScanner(
+    "qr-reader", { fps: 10, qrbox: 250 });
+    html5QrcodeScanner.render(onScanSuccess);
+    }
+</script>
+  </body>
 </html>
