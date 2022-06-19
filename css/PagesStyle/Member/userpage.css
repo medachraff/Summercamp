@@ -96,16 +96,16 @@ align-items: center;
 
 
 .container{
-    width: 128px;
-    height: 232px;
+    width: 134px;
     position: relative;
-    display: flex;
     justify-content: center;
     display: inline-block;
+    height: 200px;
 }
 .container img{
     position: absolute;
-    width: 100%;
+    width: auto;
+    height: 100%;
 }
 .container .details{
     font-family: 'Inter';
